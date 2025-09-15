@@ -16,14 +16,19 @@ module bin2bcd_tb;
   initial begin
     bcd = 0;
     binary = 0;
+    // Expected bcd = 0, carry = 0
     #10ns
     binary = 3;
+    // Expected bcd = 3, carry = 0
     #10ns
     binary = 7;
+    // Expected bcd = 7, carry = 0
     #10ns
     binary = 10;
+    // Expected bcd = 0, carry = 1
     #10ns
     binary = 15;
+    // Expected bcd = 5, carry = 1
   end
 
 endmodule

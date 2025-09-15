@@ -13,6 +13,7 @@ module bin2gray_tb;
   );
 
   initial begin
+    // All values tested
     binary = 0;
     #10ns
     binary = 'd1;

@@ -26,9 +26,10 @@ module csa_8 (
     .carry(carry0)
   );
 
+  // Do addition for Cin == 1, the same as A+B+1
+  assign {carry1, sum1} = carry0+sum0+4'd1;
+
   always_comb begin
-    // Do addition for Cin == 1, the same as A+B+1
-    assign {carry1, sum1} = carry0+sum0+4'd1;
     sum[7:4] = c_lo ? sum1 : sum0;
     carry = c_lo ? carry1 : carry0;
   end

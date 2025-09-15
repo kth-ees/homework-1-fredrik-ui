@@ -13,19 +13,19 @@ module count_1_tb;
 
   initial begin
     a = 0;
-    // Expected result = 0
+    // Expected out = 0
     #10ns
     a = 'b0001;
-    // Expected result = 1
+    // Expected out = 1
     #10ns
     a = 'b0011;
-    // Expected result = 2
+    // Expected out = 2
     #10ns
     a = 'b1110;
-    // Expected result = 3
+    // Expected out = 3
     #10ns
     a = 'b1111;
-    // Expected result = 4
+    // Expected out = 4
 
   end
 endmodule

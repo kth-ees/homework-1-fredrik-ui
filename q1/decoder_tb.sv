@@ -13,15 +13,21 @@ module decoder_tb;
   // Complete your testbench here
   initial begin
     binary = 0;
+    // Expected = 0
     #10ns
-    binary = 0;
+    binary = 1;
+    // Expected = 1
     #10ns
     binary = 2;
+    // Expected = 2
     #10ns
     binary = 7;
-    #10ns
-    binary = 15;
+    // Expected = 7
     #10ns
     binary = 12;
+    // Expected = 12
+    #10ns
+    binary = 15;
+    // Expected = 15
   end
 endmodule
