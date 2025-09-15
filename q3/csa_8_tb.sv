@@ -26,7 +26,7 @@ module csa_8_tb;
     // Lower 4 bits addition with overflow
     a = 15;
     b = 15;
-    // Expected sum = 1e, carry = 1
+    // Expected sum = 1e, carry = 0 (4bit addition produces a carry)
     #10ns
     // All 8 bits addition, with a overflow
     a = 240;
@@ -36,7 +36,7 @@ module csa_8_tb;
     // Carry in for 4 upper bits is 0 but the whole addition results in overflow
     a = 'b11000011;
     b = 'b11101000;
-    // Expected sum = 171 (10101011), carry = 1
+    // Expected sum = 171 (or AB in hex), carry = 1
   end
 
 endmodule
