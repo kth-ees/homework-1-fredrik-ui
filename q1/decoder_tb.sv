@@ -11,4 +11,17 @@ module decoder_tb;
   );
 
   // Complete your testbench here
+  initial begin
+    binary = 0;
+    #10ns
+    binary = 0;
+    #10ns
+    binary = 2;
+    #10ns
+    binary = 7;
+    #10ns
+    binary = 15;
+    #10ns
+    binary = 12;
+  end
 endmodule
